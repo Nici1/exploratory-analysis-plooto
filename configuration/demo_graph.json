@@ -1,8 +1,10 @@
 {
-    "file_name":"braila_pressure5770.csv",
+    "file_name":"data/Braila_new_data/braila_pressure5770.csv",
     "anomaly_detection_alg": ["BorderCheck()"],
     "anomaly_detection_conf": [{
+        "filtering": "None",
         "input_vector_size": 1,
+        "time_average_shifts": [1,600],
         "warning_stages": [0.5, 0.9],
         "UL": 18,
         "LL": 15,

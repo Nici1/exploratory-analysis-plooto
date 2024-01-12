@@ -1,0 +1,31 @@
+{
+    "anomaly_detection_alg": ["Clustering()"],
+   
+    "file_name": "data/training/braila_pressure5770.csv",
+
+    "anomaly_detection_conf": [
+        {
+            "filtering": "None",
+            "train_data": "data/training/braila_pressure5770.csv",
+            "input_vector_size": 10,
+            "use_cols":[0,1,2],
+            "warning_stages": [0.7, 0.9],
+            "eps": 0.5,
+            "treshold": 1.5,
+            "time_average_shifts": [3, 2000],
+            "max_memory":10,
+            "min_samples": 4,
+            "output": ["TerminalOutput()"],
+            "output_conf": [{}],
+            "visualization": "StatusPointsVisualization()",
+            "visualization_conf": {
+                "num_of_bins": 60,
+                "range": [9, 20],
+                "num_of_points": 50,
+                "num_of_lines": 1,
+                "linestyles": ["wo"],
+                "demo_pause": 1.0
+            }
+        }
+    ]
+}
