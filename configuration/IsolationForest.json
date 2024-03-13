@@ -1,0 +1,29 @@
+{
+    "bootstrap_servers": ["localhost:9092"],
+    "auto_offset_reset": "latest",
+    "enable_auto_commit": "True",
+    "group_id": "my-group",
+    "value_deserializer": "lambda x: loads(x.decode('utf-8'))",
+    "topics":  ["anomaly_detection"],
+    "anomaly_detection_alg": ["IsolationForest()"],
+    "anomaly_detection_conf": [{
+        "load_model_from": "models/Continental0",
+        "train_conf": {
+            "max_features": 3,
+            "max_samples": 1000,
+            "contamination": "auto",
+            "model_name": "IsolForestModel"
+        },
+        "input_vector_size": 2,
+        "averages": [[2, 3, 5], [2]],
+        "shifts": [[1, 2, 3, 4]],
+        "time_features": ["day", "month", "weekday", "hour"],
+        "output": ["TerminalOutput()"],
+        "max_samples": 1000,
+        "max_features": 3,
+        "model_name": "IsolForest1",
+        "output_conf": [
+            {}
+        ]
+    }]
+}

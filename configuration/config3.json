@@ -1,0 +1,21 @@
+{
+    "file_name": "ExampleData/realKnownCause/realKnownCause/ec2_request_latency_system_failure.csv",
+    "anomaly_detection_alg": "Filtering()",
+    "anomaly_detection_conf": {
+        "input_vector_size": 1,
+        "mode": 1,
+        "LL": 30,
+        "UL": 60,
+        "filter_order": 3,
+        "cutoff_frequency":0.2,
+        "warning_stages": [0.5],
+        "output": ["TerminalOutput()", "FileOutput()"],
+        "output_conf": [
+            {},
+            {
+                "file_name": "latency_Filtering.csv",
+                "mode": "w"
+            }
+        ]
+    }
+}

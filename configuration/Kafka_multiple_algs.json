@@ -1,0 +1,73 @@
+{
+    "bootstrap_servers": [
+        "localhost:9092"
+    ],
+    "auto_offset_reset": "latest",
+    "enable_auto_commit": "True",
+    "group_id": "my-group",
+    "value_deserializer": "lambda x: loads(x.decode('utf-8'))",
+    "topics":[
+        "input_stream", 
+        "input_stream"
+    ],
+    "anomaly_detection_alg": [
+        "Welford()",
+        "Welford()"
+    ],
+    "filtering": [
+        "None",
+        "None"
+    ],
+    "anomaly_detection_conf": [
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 3,
+            "X": 6,
+            "max_memory": 10,
+            "time_average_shifts": [
+                1,
+                200
+            ],
+            "output": [
+                "KafkaOutput()"
+            ],
+            "output_conf": [
+                {
+                    "node_id": "Test_MA_1",
+                    "send_ok": true
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 3,
+            "X": 4,
+            "max_memory": 10,
+            "time_average_shifts": [
+                1,
+                200
+            ],
+            "output": [
+                "KafkaOutput()"
+            ],
+            "output_conf": [
+                {
+                    "node_id": "Test_MA_2",
+                    "send_ok": true
+                }
+            ]
+        }
+    ]
+}

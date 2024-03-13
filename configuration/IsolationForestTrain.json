@@ -1,0 +1,33 @@
+{
+    "bootstrap_servers": [
+        "localhost:9092"
+    ],
+    "auto_offset_reset": "latest",
+    "enable_auto_commit": "True",
+    "group_id": "my-group",
+    "value_deserializer": "lambda x: loads(x.decode('utf-8'))",
+    "file_name": "data/consumer/braila_pressure5771_eval.csv",
+    "anomaly_detection_alg": ["IsolationForest()"],
+    "anomaly_detection_conf": [{
+        "train_data": "data/training/braila_pressure5771_train.csv",
+        "train_conf": {
+            "max_features": 4,
+            "max_samples": 2000,
+            "contamination": 0.001,
+            "model_name": "IsolForestModel"
+        },
+        "retrain_interval": 100000,
+        "samples_for_retrain": 2000,
+        "retrain_file": "./data/retrain/test.csv",
+        "input_vector_size": 1,
+        "shifts": [[1,2, 3, 4]],
+        "averages": [[1]],
+        "output": ["FileOutput()"],
+        "output_conf": [
+            {
+                "file_name": "braila_pressure5771_IF_anomalies.csv",
+                "mode": "w"
+            }
+        ]}
+    ]
+}

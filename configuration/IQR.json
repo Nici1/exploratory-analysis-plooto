@@ -1,0 +1,20 @@
+{
+    "file_name":"data/training/braila_pressure5770_train.csv",
+    "anomaly_detection_alg": ["Quantile()"],
+    "anomaly_detection_conf": [{
+
+        "filtering": "None",
+        "train_data":"data/training/braila_pressure5770_train.csv",
+        "input_vector_size": 1,
+        "time_average_shifts": [1,600],
+        "quantile_range": [25, 75],
+        "anomaly_range": 1.5,
+        "output": ["FileOutput()"],
+            "output_conf": [
+                {
+                    "file_name": "IQR/braila_pressure5770_train.csv",
+                    "mode": "w"
+                }
+            ]
+    }]
+}

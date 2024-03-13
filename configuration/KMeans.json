@@ -1,0 +1,35 @@
+{
+    "anomaly_detection_alg": ["Kmeans()"],
+   
+    "file_name": "data/sensor-cleaning-data/cleaned/data1.csv",
+
+    "anomaly_detection_conf": [
+        {
+            "filtering": "None",
+            "train_data": "data/sensor-cleaning-data/cleaned/data1.csv",
+            "input_vector_size": 1,
+            "warning_stages": [0.7, 0.9],
+            
+        
+            "n_clusters":4,
+            "treshold":4,
+            "output": ["TerminalOutput()"],
+            "output_conf": [
+                {
+                    "file_path": "Kmeans/braila_pressure5770.csv",
+                    "file_name": "Kmeans/braila_pressure5770.csv",
+                    "mode": "w"
+                }
+            ],
+            "visualization": "StatusPointsVisualization()",
+            "visualization_conf": {
+                "num_of_bins": 60,
+                "range": [9, 20],
+                "num_of_points": 50,
+                "num_of_lines": 1,
+                "linestyles": ["wo"],
+                "demo_pause": 0.0000000000000000000000000000001
+            }
+        }
+    ]
+}

@@ -1,0 +1,715 @@
+{
+    "anomaly_detection_alg": [
+        "Welford()",
+        "Welford()",
+        "Welford()",
+        "Welford()",
+        "Welford()",
+        "Welford()",
+        "Welford()",
+        "Welford()",
+        "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+         "Welford()",
+        "MACD()",
+        "MACD()",
+        "BorderCheck()"
+    ],
+    "filtering": [
+        "[[1, 0, 0], [0, 30, 0]]",
+        "[[1, 0, 0], [0, 30, 0]]",
+        "[[1, 0, 0], [0, 30, 0]]",
+        "None",
+        "None",
+        "None",
+        "[[14, 30, 0], [4, 30, 0]]",
+        "[[14, 30, 0], [4, 30, 0]]",
+        "[[14, 30, 0], [4, 30, 0]]",
+        "[[1, 0, 0], [1, 0, 0]]",
+        "[[8, 0, 0], [0, 30, 0]]",
+        "[[9, 0, 0], [0, 30, 0]]",
+        "[[10, 0, 0], [0, 30, 0]]",
+        "[[11, 0, 0], [0, 30, 0]]",
+        "[[12, 0, 0], [0, 30, 0]]",
+        "[[13, 0, 0], [0, 30, 0]]",
+        "[[14, 0, 0], [0, 30, 0]]",
+        "[[15, 0, 0], [0, 30, 0]]",
+        "[[16, 0, 0], [0, 30, 0]]",
+        "[[17, 0, 0], [0, 30, 0]]",
+        "[[18, 0, 0], [0, 30, 0]]",
+        "[[19, 0, 0], [0, 30, 0]]",
+        "[[20, 0, 0], [0, 30, 0]]",
+        "None",
+        "None",
+        "None"
+    ],
+    "file_name": "data/consumer/braila_flow211206H360.csv",
+    "anomaly_detection_conf": [
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 10,
+            "X": 6,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 10,
+            "X": 4,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_2.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 5,
+            "X": 4,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_3.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 30,
+            "X": 6,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_4.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 100,
+            "X": 4,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1800
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_5.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 200,
+            "X": 4,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_6.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 4,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_7.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 50,
+            "X": 4,
+            "max_memory": 100,
+            "time_average_shifts": [
+                1,
+                1800
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_8.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 100,
+            "X": 4,
+            "max_memory": 30,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_9.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_1.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_2.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_3.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_4.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_5.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_6.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_7.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_8.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 3,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_9.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 5,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_10.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 5,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_11.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 5,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_12.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 5,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_13.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "N": 20,
+            "X": 5,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                1200
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_welford_1h_14.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "period1": 20,
+            "period2": 30,
+            "UL": 400,
+            "LL": -400,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_MACD1.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.8
+            ],
+            "period1": 15,
+            "period2": 20,
+            "UL": 300,
+            "LL": -300,
+            "max_memory": 200,
+            "time_average_shifts": [
+                1,
+                3600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_MACD2.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "use_cols": [
+                1
+            ],
+            "input_vector_size": 1,
+            "warning_stages": [
+                0.9
+            ],
+            "UL": 35,
+            "LL": 15,
+            "max_memory": 30,
+            "time_average_shifts": [
+                1,
+                600
+            ],
+            "output": [
+                "FileOutput()"
+            ],
+            "output_conf": [
+                {
+                    "file_name": "test/test_BorderCheck.csv",
+                    "mode": "w"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "file_name": "data/training/braila_pressure5770.csv",
+    
+    "anomaly_detection_alg": ["LSTM()"],
+    "anomaly_detection_conf": [
+        {   
+            "filtering":"None",
+            "train_data": "data/training/braila_pressure5770.csv",
+            "train_conf":{
+                "model_name": "GAN_Braila_pressure_5770",
+                "N_shifts": 9,
+                "N_latent": 3,
+                "K": 8,
+                "len_window": 500
+            },
+            "time_average_shifts": [10, 20000],
+            "use_cols":[0,1,2,3,4,5,6,7,8,9],
+            "warning_stages": [0.7, 0.9],
+            "max_memory":150,
+                
+
+            "retrain_interval": 2000,
+            "samples_for_retrain": 2000,
+            "retrain_file": "./data/retrain/GANTest_retrain.csv",
+            "input_vector_size": 10,
+            "normalization_conf":
+            {
+                "N": 3
+            },
+            "output": ["TerminalOutput()"],
+            "output_conf": [{}]
+        }
+    ]
+}

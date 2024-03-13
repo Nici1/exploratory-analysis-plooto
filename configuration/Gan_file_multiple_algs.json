@@ -1,0 +1,117 @@
+{
+    "anomaly_detection_alg": ["Combination()"],
+    "file_name": "data/consumer/Braila/flow211206H360.csv",
+    "anomaly_detection_conf": [
+    {
+        "use_cols": [1],
+        "input_vector_size": 1,
+        "status_determiner": "PercentScore()",
+        "status_determiner_conf": {"interval": 7200},
+        "anomaly_algorithms": [
+            "GAN()",
+            "GAN()",
+            "GAN()",
+            "GAN()"
+        ],
+        "output": ["FileOutput()"],
+        "output_conf": [{
+            "file_name":  "Braila/flow211206H360_meta_Gan.csv",
+            "mode": "w"
+        }],
+        "anomaly_algorithms_configurations": [
+        {
+            "filtering": "None",
+            "train_data": "data/retrain/flow211206H360.csv",
+            "train_conf":{
+                "model_name": "GAN_Braila_flow",
+                "N_shifts": 9,
+                "N_latent": 3,
+                "K": 4,
+                "len_window": 200
+            },
+            "retrain_interval": 200000,
+            "samples_for_retrain": 200000,
+            "retrain_file": "./data/retrain/flow211206H360.csv",
+            "input_vector_size": 1,
+            "max_memory": 800,
+            "use_cols": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "time_average_shifts": [
+                10,
+                3600
+            ],
+            "output": [],
+            "output_conf": [{}]
+        },
+        {
+            "filtering": "None",
+            "train_data": "data/retrain/flow211206H360.csv",
+            "train_conf":{
+                "model_name": "GAN_Braila_flow",
+                "N_shifts": 9,
+                "N_latent": 3,
+                "K": 3,
+                "len_window": 200
+            },
+            "retrain_interval": 200000,
+            "samples_for_retrain": 200000,
+            "retrain_file": "./data/retrain/flow211206H360.csv",
+            "input_vector_size": 1,
+            "max_memory": 800,
+            "use_cols": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "time_average_shifts": [
+                10,
+                3600
+            ],
+            "output": [],
+            "output_conf": [{}]
+        },
+        {
+            "filtering": "None",
+            "train_data": "data/retrain/flow211206H360.csv",
+            "train_conf":{
+                "model_name": "GAN_Braila_flow",
+                "N_shifts": 23,
+                "N_latent": 8,
+                "K": 2,
+                "len_window": 200
+            },
+            "retrain_interval": 200000,
+            "samples_for_retrain": 200000,
+            "retrain_file": "./data/retrain/flow211206H360.csv",
+            "input_vector_size": 1,
+            "max_memory": 1600,
+            "use_cols": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+            "time_average_shifts": [
+                24,
+                3600
+            ],
+            "output": [],
+            "output_conf": [{}]
+        },
+        {
+            "filtering": "None",
+            "train_data": "data/retrain/flow211206H360.csv",
+            "train_conf":{
+                "model_name": "GAN_Braila_flow",
+                "N_shifts": 19,
+                "N_latent": 8,
+                "K": 4,
+                "len_window": 200
+            },
+            "retrain_interval": 200000,
+            "samples_for_retrain": 200000,
+            "retrain_file": "./data/retrain/flow211206H360.csv",
+            "input_vector_size": 1,
+            "max_memory": 800,
+            "use_cols": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+            "time_average_shifts": [
+                20,
+                1800
+            ],
+            "output": [],
+            "output_conf": [{}]
+        }
+        ]
+    }
+    ]
+}

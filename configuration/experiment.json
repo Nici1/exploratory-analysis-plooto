@@ -1,0 +1,22 @@
+{
+    "file_name":"data/training/braila_pressure5770_train.csv",
+    "anomaly_detection_alg": ["Experiment()"],
+    "anomaly_detection_conf": [{
+        "filtering": "None",
+        "input_vector_size": 1,
+        "percentile_range":[1,99],
+        "shift":300,
+        "max_memory":300,
+        "warning_stages": [0.5, 0.9],
+        "UL": 18,
+        "LL": 15,
+        "output": ["FileOutput()"],
+            "output_conf": [
+                {
+                    "file_path": "percentile/braila_pressure5770_train.txt",
+                    "file_name": "percentile/braila_pressure5770_train.txt",
+                    "mode": "w"
+                }
+            ]
+    }]
+}

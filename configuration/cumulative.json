@@ -1,0 +1,24 @@
+{
+    "bootstrap_servers": ["localhost:9092"],
+    "auto_offset_reset": "latest",
+    "enable_auto_commit": "True",
+    "group_id": "my-group",
+    "value_deserializer": "lambda x: loads(x.decode('utf-8'))",
+    "file_name":"braila_pressure5770.csv",
+    "anomaly_detection_alg": ["Cumulative()"],
+    "anomaly_detection_conf": [{
+        "input_vector_size": 1,
+        "warning_stages": [0.5, 0.9],
+        "decay": 0.005,
+        "averaging": 300,
+        "output": ["TerminalOutput()"],
+        "output_conf": [{}],
+        "visualization": "StatusPointsVisualization()",
+        "visualization_conf":
+            {
+                "num_of_points": 200,
+                "num_of_lines": 1,
+                "linestyles":["wo"]
+            }
+    }]
+}

@@ -1,0 +1,26 @@
+{
+    "file_name": "braila_pressure5770.csv",
+    "topics": ["anomaly_detection"],
+    "anomaly_detection_alg": ["BorderCheck()"],
+    "anomaly_detection_conf": [{
+        "input_vector_size": 1,
+        "warning_stages": [0.7, 0.9],
+        "UL": 4,
+        "LL": 2,
+        "output": ["FileOutput()", "FileOutput()", "FileOutput()"],
+        "output_conf": [
+            {
+                "file_name": "sin.csv",
+                "mode": "w"
+            },
+            {
+                "file_name": "sin.json",
+                "mode": "w"
+            },
+            {
+                "file_name": "sin.txt",
+                "mode": "w"
+            }
+        ]
+    }]
+}

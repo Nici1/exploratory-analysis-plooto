@@ -1,0 +1,41 @@
+{
+    "anomaly_detection_alg": ["Welford()", "Welford()"],
+    "file_name": "data/consumer/Braila/braila_flow211106H360.csv",
+    "filtering": [
+        "[[1, 0, 0], [0, 0, 30]]",
+        "[[14, 30, 0], [4, 30, 0]]"
+    ],
+
+    "anomaly_detection_conf": [
+        {
+            "filtering": "None",
+            "use_cols": [1],
+            "input_vector_size": 1,
+            "warning_stages": [0.7, 0.9],
+            "N": 10,
+            "X": 4,
+            "output": ["FileOutput()"],
+            "output_conf": [
+                {
+                    "file_name": "test_data_alg1.csv",
+                    "mode": "w"
+                }
+            ]
+        },
+        {
+            "filtering": "None",
+            "use_cols": [1],
+            "input_vector_size": 1,
+            "warning_stages": [0.7, 0.9],
+            "N": 10,
+            "X": 4,
+            "output": ["FileOutput()"],
+            "output_conf": [
+                {
+                    "file_name": "test_data_alg2.csv",
+                    "mode": "w"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "file_name":"55.csv",
+    "anomaly_detection_alg": ["EMA_Percentile()"],
+    "anomaly_detection_conf": [{
+        "input_vector_size": 1,
+        "period": 5,
+        "percentile": 98,
+        "window": 1000,
+        "start_on": 50,
+        "output": ["FileOutput()"],
+        "output_conf": [{
+            "file_name": "EMA_perc_55.csv",
+            "mode": "w"
+        }],
+        "visualization_conf":
+            {
+                "num_of_bins": 60,
+                "range": [9, 20],
+                "num_of_points": 50,
+                "num_of_lines": 1,
+                "linestyles":["wo"],
+                "demo_pause": 0.01
+            }
+    }]
+}

@@ -1,0 +1,27 @@
+{
+    "bootstrap_servers": ["localhost:9092"],
+    "auto_offset_reset": "latest",
+    "enable_auto_commit": "True",
+    "group_id": "my-group",
+    "value_deserializer": "lambda x: loads(x.decode('utf-8'))",
+    "topics": ["anomaly_detection"],
+    "anomaly_detection_alg": "IsolationForest()",
+    "anomaly_detection_conf": {
+        "load_model_from": "models/Continental0",
+        "input_vector_size": 2,
+        "averages": [[2, 3, 5], [2]],
+        "shifts": [[1, 2, 3, 4]],
+        "time_features": ["day", "month", "weekday", "hour"],
+        "output": ["TerminalOutput()"],
+        "output_conf": [
+            {}
+        ],
+        "visualization": "GraphVisualization()",
+        "visualization_conf":
+            {
+                "num_of_points": 50,
+                "num_of_lines": 1,
+                "linestyles":["wo", "r-", "b--", "b--"]
+            }
+    }
+}
